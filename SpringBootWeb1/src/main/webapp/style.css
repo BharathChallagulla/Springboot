@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EDE0D4; /* Light coffee cream */
+    color: #4A2C2A; /* Dark coffee bean */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #D2B48C; /* Tan coffee */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    color: #6F4E37; /* Medium roasted coffee */
+    margin-bottom: 25px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #5A3F2C; /* Strong coffee */
+    text-align: left;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #8B4513; /* Saddle brown - strong coffee */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    color: #4A2C2A;
+    background-color: #FCF8F5; /* Almost white, light cream */
+}
+
+input[type="text"]:focus {
+    border-color: #A0522D; /* Sienna - darker coffee */
+    outline: none;
+    box-shadow: 0 0 5px rgba(160, 82, 45, 0.5);
+}
+
+input[type="submit"] {
+    background-color: #A0522D; /* Sienna */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+input[type="submit"]:hover {
+    background-color: #8B4513; /* Darker Sienna */
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+    margin-top: 25px;
+    font-size: 1.4em;
+    color: #6F4E37;
+    font-weight: bold;
+    background-color: #F8F3ED; /* Very light coffee */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #A0522D;
+}
+
+.error {
+    color: #CC0000; /* Red for errors */
+    margin-top: 15px;
+    font-weight: bold;
+    background-color: #FFF0F0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #CC0000;
+}
