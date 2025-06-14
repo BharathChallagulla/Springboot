@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bharath</groupId>
-	<artifactId>SpringBootRest</artifactId>
+	<artifactId>SpringBootRestJobApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBootRest</name>
 	<description>Demo project for Spring Boot combining ui</description>
