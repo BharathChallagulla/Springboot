@@ -1,4 +1,4 @@
-package com.example.JobApp.model;
+package com.bharath.SpringBootRest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +15,6 @@ public class JobPost {
     private int postId;
     private String postProfile;
     private String postDesc;
-    private Integer reqExperience;
+    private int reqExperience;
     private List<String> postTechStack;
 }
