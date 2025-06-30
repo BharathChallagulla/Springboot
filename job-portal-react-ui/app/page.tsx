@@ -7,9 +7,11 @@ import Grid from "@mui/material/Grid";
 
 import { JobPost } from "@/types";
 import JobPostCard from "./components/JobPostCard";
+import SearchBarComponent from "./components/SearchBar";
 
 export default function Home() {
   const [post, setPost] = useState<JobPost[] | null>(null);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -34,9 +36,24 @@ export default function Home() {
     deletePost();
   };
 
+  const handleSearchChange = async (searchParam: string) => {
+    console.log("Search Param:", searchParam);
+    if (searchParam.trim() === "") {
+      const response = await axios.get(`http://localhost:8080/jobPosts`);
+      setPost(response.data);
+    } else {
+      const response = await axios.get(
+        `http://localhost:8080/jobPost/keyword/${searchParam}`
+      );
+      setPost(response.data);
+    }
+  };
+
   return (
     <Grid container spacing={2} sx={{ margin: "2%" }}>
-      {/* <Grid item xs={12}></Grid> */}
+      <Grid size={12}>
+        <SearchBarComponent handleSearchChange={handleSearchChange} />
+      </Grid>
       {post &&
         post.map((p, index) => {
           return (
