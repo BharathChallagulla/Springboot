@@ -24,17 +24,29 @@ public class JobRestController {
     }
 
     @PostMapping("jobPost")
-    public boolean createJobPost(@RequestBody JobPost job){
+    public JobPost createJobPost(@RequestBody JobPost job){
         return service.createJobPost(job);
     }
 
     @DeleteMapping("jobPost/{postId}")
-    public boolean deleteJobPostById(@PathVariable("postId") int postId){
-        return service.deleteJobPostById(postId);
+    public String deleteJobPostById(@PathVariable("postId") int postId){
+         service.deleteJobPostById(postId);
+         return "Deleted";
     }
 
     @PutMapping("jobPost")
-    public boolean updateJobPost(@RequestBody JobPost job){
+    public JobPost updateJobPost(@RequestBody JobPost job){
         return service.updateJobPost(job);
+    }
+
+    @GetMapping("jobPost/keyword/{keyword}")
+    public List<JobPost> search(@PathVariable("keyword") String keyword){
+        return service.search(keyword);
+    }
+
+    @GetMapping("load")
+    public String loadData(){
+        service.loadData();
+        return "success";
     }
 }
